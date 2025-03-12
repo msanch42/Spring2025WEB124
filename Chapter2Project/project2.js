@@ -4,9 +4,9 @@ let para1 = document.getElementById("p1"); //create and initialize a variable na
 
 para1.textContent = myName; //set para1.textContent = myName
 
-let n1 = 28; //create and initialize two number variables with the names n1 and n2 using any numeric values desired
+let n1 = 23; //create and initialize two number variables with the names n1 and n2 using any numeric values desired
 
-let n2 = 36;
+let n2 = 30;
 
 let numberSum = n1 + n2; //create and initialize a variable named numberSum to add the two numbers using their variable names
 
