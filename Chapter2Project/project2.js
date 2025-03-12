@@ -10,5 +10,5 @@ let n2 = 36;
 
 let numberSum = n1 + n2; //create and initialize a variable named numberSum to add the two numbers using their variable names
 
-document.GetElementById("p2").textContent = numberSum; //set document.getElementById("p2").textContent = numberSum;
+document.getElementById("p2").textContent = numberSum; //set document.getElementById("p2").textContent = numberSum;
 
