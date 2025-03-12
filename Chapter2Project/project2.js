@@ -12,5 +12,7 @@ let numberSum = n1 + n2; //create and initialize a variable named numberSum to a
 
 document.getElementById("p2").textContent = numberSum; //set document.getElementById("p2").textContent = numberSum;
 
+let numberMult = n1 * n2; //create and initialize a variable named numberMult to multiply the two numbers using their variable names.
 
+document.getElementById("p3").textContent = numberMult; //set document.getElementById("p3").textContent = numberMult;
 
