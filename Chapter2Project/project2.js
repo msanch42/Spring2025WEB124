@@ -26,6 +26,6 @@ document.getElementById("p5").textContent = myNameMultNum;//set document.getElem
 
 let ageCompare = 27 > n1; //create and initialize a variable named ageCompare to compare your age (you can use a made-up, but realistic value) to the multiplication of your numeric variables 
 
-document.getElementById("p5").textContent = ageCompare; //set document.getElementById("p6").textContent = ageCompare;
+document.getElementById("p6").textContent = ageCompare; //set document.getElementById("p6").textContent = ageCompare;
 
 
