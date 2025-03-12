@@ -16,3 +16,7 @@ let numberMult = n1 * n2; //create and initialize a variable named numberMult to
 
 document.getElementById("p3").textContent = numberMult; //set document.getElementById("p3").textContent = numberMult;
 
+let myNameAddNum = n1 + myName;//create and initialize a variable named myNameAddNum to add one of your numeric variables to the string variable
+
+document.getElementById("p4").textContent = myNameAddNum;//set document.getElementById("p4").textContent = myNameAddNum;
+
