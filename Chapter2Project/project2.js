@@ -20,3 +20,12 @@ let myNameAddNum = n1 + myName;//create and initialize a variable named myNameAd
 
 document.getElementById("p4").textContent = myNameAddNum;//set document.getElementById("p4").textContent = myNameAddNum;
 
+let myNameMultNum = n2 * myName;//create and initialize a variable named myNameMultNum to multiply one of your numeric variables to the string variable
+
+document.getElementById("p5").textContent = myNameMultNum;//set document.getElementById("p5").textContent = myNameMultNum;
+
+let ageCompare = 27 > n1; //create and initialize a variable named ageCompare to compare your age (you can use a made-up, but realistic value) to the multiplication of your numeric variables 
+
+document.getElementById("p5").textContent = ageCompare; //set document.getElementById("p6").textContent = ageCompare;
+
+
