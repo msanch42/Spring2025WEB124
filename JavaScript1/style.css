@@ -4,7 +4,7 @@
 /* new properties: transition, transform*/
 html {
   font-size: 10px;
-  background: url('./jungle.jpg');
+  background: url('./jungle.jpg');/* background from https://unsplash.com/photos/green-ferns-_qZ0us4az20 */
   background-size: cover;
 }
 
