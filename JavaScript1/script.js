@@ -30,7 +30,7 @@ function removeTransition(e) {
 
 function playSoundOnClick(e) {
     const letterClicked = e.target.id;
-    if(!letterClicked) return;
+    if (!letterClicked) return;
     e.target.parentNode.classList.add('playing');
     switch(letterClicked) {
         case "j":
@@ -58,4 +58,4 @@ function playSoundOnClick(e) {
             document.getElementById("audioe").play();
             break;
     }
-};
+}
