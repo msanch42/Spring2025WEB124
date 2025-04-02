@@ -1,0 +1,45 @@
+/* Monica Sanchez 4/2/25 */
+
+body { 
+    font-family:Arial, Helvetica, sans-serif;
+    color: #555555; 
+}
+#wrapper {
+    background-color: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #568c76; 
+}
+
+main {
+    background-color: white;
+    overflow: auto;
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+footer {
+    font-size: 80%;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 2em;
+    background-color: #FFFFFF;
+}
+
+@media (min-width: 1250px) {
+
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        border: 1px solid #000033;
+    }
+}
