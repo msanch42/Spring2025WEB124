@@ -2,9 +2,16 @@
 /* Adapted from https://javascript.com/ */
 /* JS and CSS Clock */
 /* new properties: */
-
+<p id="digitalTime">Current Time:</p>  
+    <div id="clock">
+      <div id="clock-face">
+        <div class="hand" id="hour-hand"></div>
+        <div class="hand" id="min-hand"></div>
+        <div class="hand" id="second-hand"></div>
+      </div>
+    </div>   
  html {
-      background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
+      background:  url(https://unsplash.it/1500/1000?image=881&blur=5);
       background-size: cover;
       font-family: 'helvetica neue';
       text-align: center;
