@@ -40,7 +40,7 @@
     } else {
     suffix = "pm";
     }
-  digitalTime.textContent = "Right Now It Is: " + hour + ":" + minutes + ":" + seconds + " " + suffix; 
+  digitalTime.textContent =  hour + ":" + minutes + ":" + seconds + " " + suffix; 
  }
 
   setInterval(setDate, 1000);
