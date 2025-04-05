@@ -67,15 +67,15 @@
 
 #hour-hand {
     background: #2C1320; /* Dark purple for hour */
-    width: 25px; /* Widest */
+    height: 25px; /* Widest */
 }
 
 #min-hand {
     background: #5F4B66; /* Medium purple for minutes */
-    width: 15px; 
+    height: 15px; 
 }
 
 #second-hand {
     background: #A7ADC6; /* Light purple for second */
-    width: 5px; /* Narrowest */
+    height: 5px; /* Narrowest */
 }
