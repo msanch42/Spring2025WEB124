@@ -1,13 +1,22 @@
 // Monica Sanchez 4-3-25
 // Adapted from https://javasript.com/
 // JavaScript Drum Kit
-/* New information:
-    
+/* New/expanded information:
+    use of temperate literals (backticks),
+    manipulating date objects methods such as getHours, getMinutes, getSeconds
 */
 
- const secondHand = document.querySelector('.second-hand');
+ /* Replaced querySelector methods with getElementById
+  const secondHand = document.querySelector('.second-hand');
   const minsHand = document.querySelector('.min-hand');
   const hourHand = document.querySelector('.hour-hand');
+*/
+
+   const secondHand = document.getElementById('second-hand');
+   const minsHand = document.getElementById('min-hand');
+   const hourHand = document.getElementById('hour-hand');
+   //Added digital time
+  const digitalTime = document.getElementById('digitalTime');
 
   function setDate() {
     const now = new Date();
@@ -23,7 +32,16 @@
     const hour = now.getHours();
     const hourDegrees = ((hour / 12) * 360) + ((mins/60)*30) + 90;
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-  }
+
+ //Added AM or PM suffix 
+    let suffix = "";
+    if (hour < 12) {
+    suffix = "am";
+    } else {
+    suffix = "pm";
+    }
+  digitalTime.textContent = "Right Now It Is: " + hour + ":" + minutes + ":" + seconds + " " + suffix 
+ }
 
   setInterval(setDate, 1000);
 
