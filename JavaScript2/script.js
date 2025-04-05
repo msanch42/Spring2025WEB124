@@ -40,7 +40,7 @@
     } else {
     suffix = "pm";
     }
-  digitalTime.textContent =  hour + ":" + minutes + ":" + seconds + " " + suffix; 
+  digitalTime.textContent =  hour + ":" + mins + ":" + seconds + " " + suffix; 
  }
 
   setInterval(setDate, 1000);
