@@ -79,3 +79,7 @@
     background: #A7ADC6; /* Light purple for second */
     height: 5px; /* Narrowest */
 }
+
+#digitalTime {
+    position: top-center;
+}
