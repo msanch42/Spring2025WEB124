@@ -25,8 +25,8 @@ html {
       background: url('./kitty.jpg'); /*image from https://unsplash.com/photos/white-and-grey-bicolor-kitten-O_UbPKaz6no*/
       background-size: cover;
       /* font-family: 'helvetica neue'; */
-      text-align: center;
-      font-size: 10px;
+      /* text-align: center;
+      font-size: 10px; */
     }
 
 body {
@@ -89,18 +89,18 @@ body {
 
 /* Created new styles for hour, minute, and second hands */
 #hour-hand {
-    background: red;
-    height: 20px;
+    background: #2C1320;
+    height: 15px;
 }
 
 #min-hand {
-    background: blue;
-    height: 10px;
+    background: #5F4B66;
+    height: 9px;
 }
 
 #second-hand {
-    background: white;
-    height: 5px;
+    background: #A7ADC6;
+    height: 4px;
 }
 
 .clock-face {
