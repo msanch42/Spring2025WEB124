@@ -11,22 +11,33 @@
         <div class="hand" id="second-hand"></div>
       </div>
     </div> */  
- html {
+/* Added new font style style */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Added universal selector */
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+html {
       /* background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5); */
       background: url('./kitty.jpg');
       background-size: cover;
-      font-family: 'helvetica neue';
+      /* font-family: 'helvetica neue'; */
       text-align: center;
       font-size: 10px;
     }
 
     body {
-      margin: 0;
+      /* margin: 0; */
+      font-family: 'Poppins', sans-serif;
       font-size: 2rem;
       display: flex;
-      /* flex: 1;
+      justify-content: center; /* Added justify-content */
+      flex: 1;
       min-height: 100vh;
-      align-items: center; */
+      align-items: center;
     }
 
     .clock {
