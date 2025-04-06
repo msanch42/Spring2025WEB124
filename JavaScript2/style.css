@@ -102,19 +102,22 @@ body {
 /* Created new styles for hour, minute, and second hands */
 #hour-hand {
     background: #2C1320;
-    height: 9px;
+    width: 5px;
+    height: 18px;
     border-radius: 6px;
 }
 
 #min-hand {
     background: #5F4B66;
-    height: 15px;
+    width: 5px;
+    height: 10px;
     border-radius: 6px;
 }
 
 #second-hand {
     background: #A7ADC6;
-    height: 4px;
+    width: 5px;
+    height: 5px;
     border-radius: 6px;
 }
 
