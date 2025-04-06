@@ -78,7 +78,7 @@ body {
 }
 
 /* CSS style to create a circle in the middle for the hour, minute, and second hands */
-.clock:after{
+.clock-face:after{
     content: '';
     width: 10px;
     height: 10px;
@@ -88,12 +88,22 @@ body {
 }
 
 /* Created new styles for hour, minute, and second hands */
-.needle span{
-    width: 5px;
-    height: var(--h);
+#hour-hand {
+    background: red;
+    height: 20px;
 }
 
-#clock-face {
+#min-hand {
+    background: blue;
+    height: 10px;
+}
+
+#second-hand {
+    background: white;
+    height: 5px;
+}
+
+.clock-face {
       position: relative; 
       width: 100%;
       height: 100%;
@@ -112,7 +122,3 @@ body {
       transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
-
-#digitalTime {
-    align: center;
-}
