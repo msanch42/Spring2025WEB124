@@ -2,7 +2,7 @@
 /* Adapted from https://javascript.com/ */
 /* JS and CSS Clock */
 /* new CSS properties: transition-timing-function, transform-origin*/
-/* new CSS functions: inset, translateY, cubic-bezier */
+/* new CSS functions: inset, translateY, cubic-bezier, rotate(calc()), inline-block */
 /*<p id="digitalTime">Current Time:</p>  
     <div id="clock">
       <div id="clock-face">
@@ -22,14 +22,14 @@
  
 html {
       /* background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5); */
-      background: url('./kitty.jpg');
+      background: url('./kitty.jpg'); /*image from https://unsplash.com/photos/white-and-grey-bicolor-kitten-O_UbPKaz6no*/
       background-size: cover;
       /* font-family: 'helvetica neue'; */
       text-align: center;
       font-size: 10px;
     }
 
-    body {
+body {
       /* margin: 0; */
       font-family: 'Poppins', sans-serif;
       font-size: 2rem;
@@ -40,7 +40,9 @@ html {
       align-items: center;
     }
 
-    .clock {
+.clock {
+      background-color: rgb(49, 47,47); /* Addded background-color */
+      color: #fff; /* Added white color for hour numbers */  
       width: 30rem;
       height: 30rem;
       border: 10px solid black;
@@ -48,21 +50,49 @@ html {
       margin: 50px auto;
       position: relative;
       padding: 2rem;
-     /* box-shadow:
+      box-shadow:
         0 0 0 4px rgba(0,0,0,0.1),
         inset 0 0 0 3px #EFEFEF,
         inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2); */
+        0 0 10px rgba(0,0,0,0.2);
+      display: flex;
+      justify-content: center; /* Added flex display and justify-content */ 
+      position: relative; /* Added relative position */  
     }
 
-    #clock-face {
-      position: relative;
+/* Added CSS style for clock hour numbers */
+.clock ul li{
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 5px;
+}
+
+/* Aligns hour numbers upright */
+.clock ul li span{
+   transform: rotate(calc( -30deg * var(--i)));
+   display: inline-block; 
+}
+
+/* CSS style to create a circle in the middle for the hour, minute, and second hands */
+.clock:after{
+    content: '';
+    width: 0.625rem;
+    height: 0.625rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#clock-face {
+      position: relative; 
       width: 100%;
       height: 100%;
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
 
-    .hand {
+.hand {
       width: 50%;
       /* height: 6px; */
       /* background: black; */
