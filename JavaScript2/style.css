@@ -80,8 +80,8 @@ body {
 /* CSS style to create a circle in the middle for the hour, minute, and second hands */
 .clock:after{
     content: '';
-    width: 0.625rem;
-    height: 0.625rem;
+    width: 10px;
+    height: 10px;
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
