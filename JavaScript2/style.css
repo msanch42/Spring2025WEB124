@@ -2,7 +2,7 @@
 /* Adapted from https://javascript.com/ */
 /* JS and CSS Clock */
 /* new CSS properties: transition-timing-function, transform-origin*/
-/* new CSS functions: inset, translateY, cubic-bezier, rotate(calc()), inline-block */
+/* new CSS functions: inset, translateY, cubic-bezier, rotate(calc()), inline-block, var() */
 /*<p id="digitalTime">Current Time:</p>  
     <div id="clock">
       <div id="clock-face">
@@ -87,6 +87,12 @@ body {
     position: absolute;
 }
 
+/* Created new styles for hour, minute, and second hands */
+.needle span{
+    width: 5px;
+    height: var(--h);
+}
+
 #clock-face {
       position: relative; 
       width: 100%;
@@ -106,22 +112,6 @@ body {
       transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
 
-/* Created new styles for hour, minute, and second hands */
-
-#hour-hand {
-    background: #2C1320; /* Dark purple for hour */
-    height: 15px; /* Widest */
-}
-
-#min-hand {
-    background: #5F4B66; /* Medium purple for minutes */
-    height: 10px; 
-}
-
-#second-hand {
-    background: #A7ADC6; /* Light purple for second */
-    height: 5px; /* Narrowest */
-}
 
 #digitalTime {
     align: center;
