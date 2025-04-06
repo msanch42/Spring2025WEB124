@@ -90,17 +90,20 @@ body {
 /* Created new styles for hour, minute, and second hands */
 #hour-hand {
     background: #2C1320;
-    height: 15px;
+    height: 9px;
+    border-radius: 6px;
 }
 
 #min-hand {
     background: #5F4B66;
-    height: 9px;
+    height: 15px;
+    border-radius: 6px;
 }
 
 #second-hand {
     background: #A7ADC6;
     height: 4px;
+    border-radius: 6px;
 }
 
 .clock-face {
