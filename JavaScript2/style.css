@@ -50,6 +50,17 @@ body {
       position: relative; /* Added relative position */  
     }
 
+
+/* CSS style to create a circle in the middle for the hour, minute, and second hands */
+.clock:after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+}
+
 /* Added CSS style for clock hour numbers */
 .clock ul li{
     list-style: none;
@@ -71,16 +82,6 @@ body {
       height: 100%;
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
-
-/* CSS style to create a circle in the middle for the hour, minute, and second hands */
-.clock-face:after{
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-}
 
 .hand {
       width: 50%;
