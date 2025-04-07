@@ -20,8 +20,7 @@ body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       font-size: 2rem;
-      display: flex;
-      flex-direction: center; /* Added flex-direction */  
+      display: flex;  
       justify-content: center; /* Added justify-content */
       flex: 1;
       min-height: 100vh;
@@ -36,7 +35,6 @@ body {
       border: 5px solid #fff;
       border-radius: 50%;
       margin: 50px auto;
-      position: relative;
       padding: 2rem;
       /*box-shadow:
         0 0 0 4px rgba(0,0,0,0.1),
@@ -84,7 +82,7 @@ body {
     }
 
 .hand {
-      width: 35%;
+      width: 50%;
       /* height: 6px; */
       /* background: black; */
       position: absolute;
