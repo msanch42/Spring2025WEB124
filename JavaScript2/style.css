@@ -93,7 +93,7 @@ body {
 /* Created new styles for hour, minute, and second hands */
 #hour-hand {
     background: #2C1320;
-    width: 6px:
+    width: 6px;
     height: 60px;
     border-radius: 6px;
     z-index: 3;
