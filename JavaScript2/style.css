@@ -93,20 +93,26 @@ body {
 /* Created new styles for hour, minute, and second hands */
 #hour-hand {
     background: #2C1320;
-    height: 18px;
+    width: 6px:
+    height: 60px;
     border-radius: 6px;
+    z-index: 3;
 }
 
 #min-hand {
     background: #5F4B66;
-    height: 10px;
+    height: 110px;
+    width: 4px;
     border-radius: 6px;
+    z-index: 2;
 }
 
 #second-hand {
     background: #A7ADC6;
-    height: 5px;
+    width: 2px;
+    height: 130px;
     border-radius: 6px;
+    z-index: 1;
 }
 
 /* Digital time styling */
