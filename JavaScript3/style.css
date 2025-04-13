@@ -47,7 +47,7 @@ h1 {
   border-bottom: 5px solid #F3C010;
   text-align: center;
   font-size: 5rem;
-  font-weight: 100;
+  font-weight: 400;
   /*font-family: 'Pacifico', cursive;*/
   text-shadow: 3px 3px 0 #F3C010;
 }
@@ -75,6 +75,7 @@ textarea {
   border: 0;
   width: 49%;
   float: left;
+  font-weight: 400;
   font-family: "Silkscreen", sans-serif;
   /*font-family: 'Pacifico', cursive;*/
   margin-bottom: 0;
