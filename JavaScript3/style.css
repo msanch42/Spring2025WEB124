@@ -126,7 +126,8 @@ textarea {
   /* background: #ffc600; */
   background-color: var(--clr-2);
   color: var(--clr-1);  
-  border: 0;
+  /* border: 0; */
+  border-radius: 1000px;
   width: 49%;
   float: left;
   font-family:"Orbitron", sans-serif;
