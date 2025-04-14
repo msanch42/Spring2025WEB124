@@ -68,7 +68,7 @@ body {
   height: 100%;
   width: 100%;
   background-image: conic-gradient(from var(--angle), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6), var(--clr-3));
-  padding: 0.1875rem;
+  padding: 0.625rem;
   border-radius: 0.625rem;
   top: 50%;
   left:50%;
