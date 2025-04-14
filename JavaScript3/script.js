@@ -1,4 +1,13 @@
- const msg = new SpeechSynthesisUtterance();
+// Monica Sanchez 4-14-25
+// Adapted from https://javasript.com/
+// Speech Synthesis
+/* New/expanded information:
+    use of temperate literals (backticks),
+    SpeechSynthesisUtterance function, populateVoices function,
+    manipulating the voices objects, addEventListeners for voices
+*/
+
+const msg = new SpeechSynthesisUtterance();
   let voices = [];
   const voicesDropdown = document.querySelector('[name="voice"]');
   const options = document.querySelectorAll('[type="range"], [name="text"]');
@@ -31,6 +40,15 @@
     msg[this.name] = this.value;
     toggle();
   }
+
+//Prevents voiceinator from speaking if input is empty
+function toggle(startOver = true) {
+  if (!msg.text.trim()) return;
+  speechSynthesis.cancel();
+  if (startOver) {
+    speechSynthesis.speak(msg);
+  }
+}
 
   speechSynthesis.addEventListener('voiceschanged', populateVoices);
   voicesDropdown.addEventListener('change', setVoice);
