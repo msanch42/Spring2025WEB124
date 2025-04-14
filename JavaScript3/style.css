@@ -1,4 +1,4 @@
-/* Monica Sanchez 4-13-25 */
+/* Monica Sanchez 4-14-25 */
 /* Adapted from https://javascript.com/ */
 /* Speech Synthesis */
 /* new CSS properties: @property--angle, syntax, initial-value, inherits, animation, cursor, outline. @keyframes*/
@@ -119,16 +119,6 @@ h1 {
   font-size: 2rem;
   background: #F7F7F7;
   outline: 0;
-}
-
-/* Added styling to highlight words as they are spoken in real time */
-.word {
-  padding: 0 2px;
-}
-
-.highlight {
-  background-color: var(--clr-4);
-  border-radius: 4px;
 }
 
 textarea {
