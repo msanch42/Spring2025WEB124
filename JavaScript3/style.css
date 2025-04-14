@@ -93,7 +93,12 @@ h1 {
   width: calc(100% + 4rem);
   margin: -2rem 0 2rem -2rem;
   padding: .5rem;
-  background: #ffc600;
+  /* background: #ffc600; */
+  background: linear-gradient(var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3));
   border-bottom: 5px solid #F3C010;
   text-align: center;
   font-size: 5rem;
