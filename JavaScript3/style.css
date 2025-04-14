@@ -1,5 +1,8 @@
 /* Monica Sanchez 4-13-25 */
-
+/* Adapted from https://javascript.com/ */
+/* Speech Synthesis */
+/* new CSS properties: @property--angle, syntax, initial-value, inherits, animation, cursor, outline. @keyframes*/
+/* new CSS functions: linear-gradient, "<>", conic gradient, var() colors */
 html {
   font-family: "Orbitron", sans-serif;
   font-size: 10px;
@@ -145,6 +148,7 @@ textarea {
   align-items: center;
 }
 
+/* Creates a gradient button that changes color on hover */
 .voiceinator button::after {
   content: '';
   position: absolute;
