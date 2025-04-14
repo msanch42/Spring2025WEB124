@@ -42,6 +42,7 @@ const textDisplay = document.querySelector('#textDisplay');
     toggle();
   }
 
+//Added function to indicate if voiceinator is speaking
 function toggle(startOver = true) {
   speechSynthesis.cancel();
   if (startOver) {
