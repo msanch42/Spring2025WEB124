@@ -1,7 +1,8 @@
 /* Monica Sanchez 4-13-25 */
 
 html {
-  font-size: 10px;
+  /*font-size: 10px;*/
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -12,7 +13,7 @@ html {
 }
 
 :root {
---clr-1: #333;
+--clr-1: #172A3A;
 --clr-2: #073438;
 --clr-3: #0e4b50;
 --clr-4: #2d8f85;
@@ -24,17 +25,18 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   font-family: "Silkscreen", sans-serif;
   background: var(--clr-1); /* Changed background color */
   /* font-family: sans-serif; */
   /* background-color: #3BC1AC; */
-  display: flex;
+  /* display: flex; */
+  display: grid;
   min-height: 100vh;
-  align-items: center;
-
-  /*background-image:
+  place-content: center;
+  /* align-items: center;
+  background-image:
   radial-gradient(circle at 100% 150%, #3BC1AC 24%, #42D2BB 25%, #42D2BB 28%, #3BC1AC 29%, #3BC1AC 36%, #42D2BB 36%, #42D2BB 40%, transparent 40%, transparent),
   radial-gradient(circle at 0    150%, #3BC1AC 24%, #42D2BB 25%, #42D2BB 28%, #3BC1AC 29%, #3BC1AC 36%, #42D2BB 36%, #42D2BB 40%, transparent 40%, transparent),
   radial-gradient(circle at 50%  100%, #42D2BB 10%, #3BC1AC 11%, #3BC1AC 23%, #42D2BB 24%, #42D2BB 30%, #3BC1AC 31%, #3BC1AC 43%, #42D2BB 44%, #42D2BB 50%, #3BC1AC 51%, #3BC1AC 63%, #42D2BB 64%, #42D2BB 71%, transparent 71%, transparent),
@@ -49,10 +51,11 @@ body {
   margin: 0 auto;
   border-radius: 1rem;
   position: relative;
-  background: var(--clr-2); /* Changed background color for voicinator card */
+  background: var(--clr-2);
+  /* background: white; */
   overflow: hidden;
   z-index: 1;
-  box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+  /*box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);*/
 }
 
 /* Created an animated, gradient, glowing border */
