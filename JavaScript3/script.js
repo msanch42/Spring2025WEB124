@@ -15,10 +15,10 @@
   const stopButton = document.querySelector('#stop'); 
   const textInput = document.querySelector('[name="text"]');  //Created textInput and textDisplay constant variables 
   const textDisplay = document.querySelector('#textDisplay');  
-  //msg.text = document.querySelector('[name="text"]').value;
+  msg.text = document.querySelector('[name="text"]').value;
 
   // Sync msg text with input
-  msg.text = textInput.value;
+ // msg.text = textInput.value;
 
   function populateVoices() {
     voices = this.getVoices();
