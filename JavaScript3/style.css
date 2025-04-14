@@ -154,6 +154,12 @@ textarea {
   z-index: -1;
 }
 
+.voiceinator button:hover{
+  z-index: 0;
+  box-shadow: 40px 0 100px var(--clr-3),
+  -40px 0 100px var(--clr-4);
+}
+
 .voiceinator button:active {
   top: 2px;
 }
