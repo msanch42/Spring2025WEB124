@@ -1,22 +1,18 @@
 /* Monica Sanchez 4-13-25 */
 
 html {
+  font-family: "Silkscreen", sans-serif;
   font-size: 10px;
   box-sizing: border-box;
 }
 
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 :root {
---clr-1: #172A3A;
---clr-2: #073438;
---clr-3: #0e4b50;
---clr-4: #2d8f85;
---clr-5: #637c54;  
+--clr-1: white;
+--clr-2: #212427;
+--clr-3: #ff4545;
+--clr-4: #00ff99;
+--clr-5: #006aff;
+--clr-6: #ff0095;  
 }
 
 *, *:before, *:after {
@@ -26,14 +22,14 @@ html {
 body {
   /* margin: 0;
   padding: 0; */
-  font-family: "Silkscreen", sans-serif;
-  background: var(--clr-1); /* Changed background color */
+  color: var(--clr-1);
+  background: var(--clr-2); /* Changed background color */
   /* font-family: sans-serif; */
   /* background-color: #3BC1AC; */
   /* display: flex; */
   display: grid;
   min-height: 100vh;
-  place-content: center;
+  align-content: center;
   /* align-items: center;
   background-image:
   radial-gradient(circle at 100% 150%, #3BC1AC 24%, #42D2BB 25%, #42D2BB 28%, #3BC1AC 29%, #3BC1AC 36%, #42D2BB 36%, #42D2BB 40%, transparent 40%, transparent),
@@ -48,7 +44,7 @@ body {
   padding: 2rem;
   width: 50rem;
   margin: 0 auto;
-  border-radius: 1rem;
+  border-radius: 0.625rem;
   position: relative;
   background: var(--clr-2);
   /* background: white; */
@@ -58,34 +54,38 @@ body {
 }
 
 /* Created an animated, gradient, glowing border */
-.voicinator::before,
-.voicinator::after {
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.voiceinator::before,
+.voiceinator::after {
   content: "";
   position: absolute;
-  inset: -0.5rem;
   z-index: -1;
-  background: conic-gradient(
-    from var(--gradient-angle),
-    var(--clr-3),
-    var(--clr-4),
-    var(--clr-5),
-    var(--clr-4),
-    var(--clr-3)
-  );
-  border-radius: inherit;
-  animation: rotation 20s linear infinite;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6), var(--clr-3));
+  padding: 0.1875rem;
+  border-radius: 0.625rem;
+  top: 50%;
+  left:50%;
+  translate: -50% -50%;
+  animation: 3s spin linear infinite;
 }
 
-.voicinator::after {
-  filter: blur(3.5rem);
+.voiceinator::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
 }
-
-@keyframes rotation {
-  0% {
-    --gradient-angle: 0deg;
+@keyframes spin{
+  from{
+    --angle: 0deg;
   }
-  100% {
-    --gradient-angle: 360deg;
+  to{
+    --angle: 360deg;
   }
 }
 
@@ -94,19 +94,14 @@ h1 {
   margin: -2rem 0 2rem -2rem;
   padding: .5rem;
   /* background: #ffc600; */
-  background: linear-gradient(var(--clr-3),
-    var(--clr-4),
-    var(--clr-5),
-    var(--clr-4),
-    var(--clr-3));
-  border-bottom: 5px solid #F3C010;
+  border-bottom: var(--clr-3);
   text-align: center;
   font-size: 5rem;
   /*font-family: 'Pacifico', cursive;*/
   font-family:"Silkscreen", sans-serif;
   font-weight: 400;
   font-style: normal;
-  text-shadow: 3px 3px 0 #F3C010;
+  /* text-shadow: 3px 3px 0 #F3C010; */
 }
 
 .voiceinator input,
