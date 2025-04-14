@@ -11,16 +11,9 @@
   let voices = [];
   const voicesDropdown = document.querySelector('[name="voice"]');
   const options = document.querySelectorAll('[type="range"], [name="text"]');
-  const speakButton = document.getElementById('speak'); 
-  const stopButton = document.getElementById('stop'); 
-  //const speakButton = document.querySelector('#speak');
-  //const stopButton = document.querySelector('#stop'); 
-  const textInput = document.querySelector('[name="text"]');  //Created textInput and textDisplay constant variables 
-  const textDisplay = document.getElementById('textDisplay');  
- // msg.text = document.querySelector('[name="text"]').value;
-
-  // Sync msg text with input
- msg.text = textInput.value;
+  const speakButton = document.querySelector('#speak');
+  const stopButton = document.querySelector('#stop');
+  msg.text = document.querySelector('[name="text"]').value;
 
   function populateVoices() {
     voices = this.getVoices();
@@ -48,46 +41,6 @@
     toggle();
   }
 
-// Render text as individual span elements
-function renderText(text) {
-  textDisplay.innerHTML = text
-    .split(/\s+/)
-    .map(word => `<span class="word">${word}</span>`)
-    .join(' ');
-}
-
-// Created function that highlights words in real-time as they are spoken
-msg.onboundary = function (event) {
-  if (event.name !== 'word') return;
-
-  const charIndex = event.charIndex;
-  const words = [...document.querySelectorAll('.word')];
-
-  // Find which word is currently being spoken
-  let count = 0;
-  let index = -1;
-  let position = 0;
-
-  for (let word of words) {
-    const length = word.textContent.length + 1; // +1 for space
-    if (position + length > charIndex) {
-      index = count;
-      break;
-    }
-    position += length;
-    count++;
-  }
-
-  words.forEach(word => word.classList.remove('highlight'));
-  if (words[index]) {
-    words[index].classList.add('highlight');
-  }
-};
-
-msg.onend = () => {
-  document.querySelectorAll('.word').forEach(word => word.classList.remove('highlight'));
-};
-
 //Indicate if voiceinator is currently speaking
 function toggle(startOver = true) {
   speechSynthesis.cancel();
@@ -103,9 +56,9 @@ msg.onend = () => {
   speakButton.textContent = 'Speak';
 };
 
-
   speechSynthesis.addEventListener('voiceschanged', populateVoices);
   voicesDropdown.addEventListener('change', setVoice);
   options.forEach(option => option.addEventListener('change', setOption));
   speakButton.addEventListener('click', toggle);
   stopButton.addEventListener('click', () => toggle(false));
+
