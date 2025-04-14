@@ -11,12 +11,12 @@
   let voices = [];
   const voicesDropdown = document.querySelector('[name="voice"]');
   const options = document.querySelectorAll('[type="range"], [name="text"]');
-  const speakButton = document.getElementById('#speak'); 
-  const stopButton = document.getElementById('#stop'); 
+  const speakButton = document.getElementById('speak'); 
+  const stopButton = document.getElementById('stop'); 
   //const speakButton = document.querySelector('#speak');
   //const stopButton = document.querySelector('#stop'); 
   const textInput = document.querySelector('[name="text"]');  //Created textInput and textDisplay constant variables 
-  const textDisplay = document.getElementById('#textDisplay');  
+  const textDisplay = document.getElementById('textDisplay');  
  // msg.text = document.querySelector('[name="text"]').value;
 
   // Sync msg text with input
