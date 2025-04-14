@@ -41,14 +41,19 @@ const msg = new SpeechSynthesisUtterance();
     toggle();
   }
 
-//Prevents voiceinator from speaking if input is empty
 function toggle(startOver = true) {
-  if (!msg.text.trim()) return;
   speechSynthesis.cancel();
   if (startOver) {
+    speakButton.textContent = 'Speaking...';
     speechSynthesis.speak(msg);
+  } else {
+    speakButton.textContent = 'Speak';
   }
 }
+
+msg.onend = () => {
+  speakButton.textContent = 'Speak';
+};
 
   speechSynthesis.addEventListener('voiceschanged', populateVoices);
   voicesDropdown.addEventListener('change', setVoice);
