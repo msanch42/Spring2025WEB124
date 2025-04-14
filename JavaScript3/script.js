@@ -9,12 +9,11 @@
 
  const msg = new SpeechSynthesisUtterance();
   let voices = [];
-  const voicesDropdown = document.querySelector('[name="voice"]');
-  const options = document.querySelectorAll('[type="range"], [name="text"]');
-  const speakButton = document.querySelector('#speak');
-  const stopButton = document.querySelector('#stop');
-  //Created textInput and textDisplay constant variables  
-  const textInput = document.querySelector('[name="text"]');
+  const voicesDropdown = document.querySelector("[name="voice"]");
+  const options = document.querySelectorAll("[type="range"], [name="text"]");
+  const speakButton = document.querySelector("#speak");
+  const stopButton = document.querySelector("#stop"); 
+  const textInput = document.querySelector('[name="text"]');  //Created textInput and textDisplay constant variables 
   const textDisplay = document.querySelector('#textDisplay');  
   //msg.text = document.querySelector('[name="text"]').value;
 
