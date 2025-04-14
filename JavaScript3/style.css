@@ -8,11 +8,11 @@ html {
 
 :root {
 --clr-1: white;
---clr-2: #212427;
---clr-3: #ff4545;
---clr-4: #00ff99;
---clr-5: #006aff;
---clr-6: #ff0095;  
+--clr-2: #212427; /* Black color */
+--clr-3: #008cff; /* Light blue color */
+--clr-4: #e100ff; /* Violet color */
+--clr-5: #006aff; /* Dark blue color */
+--clr-6: #ff0095; /* Pink color */  
 }
 
 *, *:before, *:after {
@@ -68,7 +68,7 @@ body {
   height: 100%;
   width: 100%;
   background-image: conic-gradient(from var(--angle), var(--clr-3), var(--clr-4), var(--clr-5), var(--clr-6), var(--clr-3));
-  padding: 0.375rem;
+  padding: 0.1875rem;
   border-radius: 0.625rem;
   top: 50%;
   left:50%;
