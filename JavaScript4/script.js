@@ -6,6 +6,9 @@
     parseInt(this.dataset.time)
 */
 let countdown;
+//added code to stop timer
+let isPaused = false;
+let secondsLeft;
 const timerDisplay = document.querySelector('.display__time-left');
 const endTime = document.querySelector('.display__end-time');
 const buttons = document.querySelectorAll('[data-time]');
@@ -19,7 +22,20 @@ function timer(seconds) {
   displayTimeLeft(seconds);
   displayEndTime(then);
 
+//added code to save seconds
+  secondsLeft = seconds;
   countdown = setInterval(() => {
+    if (!isPaused) {
+      secondsLeft--; // Decrease only when not paused
+      if (secondsLeft < 0) {
+        clearInterval(countdown);
+        return;
+      }
+      displayTimeLeft(secondsLeft);
+    }
+  }, 1000);
+}  
+  /*countdown = setInterval(() => {
     const secondsLeft = Math.round((then - Date.now()) / 1000);
     // check if we should stop it!
     if(secondsLeft < 0) {
@@ -29,6 +45,15 @@ function timer(seconds) {
     // display it
     displayTimeLeft(secondsLeft);
   }, 1000);
+}*/
+
+//added new function to handle pause/resume
+function togglePauseResume() {
+  if (!countdown) return; // No active timer
+
+  isPaused = !isPaused;
+  const button = document.getElementById('pause-resume');
+  button.textContent = isPaused ? 'Resume' : 'Pause';
 }
 
 function displayTimeLeft(seconds) {
@@ -51,6 +76,9 @@ function startTimer() {
   const seconds = parseInt(this.dataset.time);
   timer(seconds);
 }
+
+//added event listener for pause/resume button
+document.getElementById('pause-resume').addEventListener('click', togglePauseResume);
 
 buttons.forEach(button => button.addEventListener('click', startTimer));
 document.customForm.addEventListener('submit', function(e) {
