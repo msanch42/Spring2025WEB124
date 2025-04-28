@@ -1,3 +1,10 @@
+// Monica Sanchez 4-27-25
+// Adapted from https://javasript.com/
+// Countdown Timer
+/* New/expanded information:
+    clearInterval(countdown), Math.round(),
+    parseInt(this.dataset.time)
+*/
 let countdown;
 const timerDisplay = document.querySelector('.display__time-left');
 const endTime = document.querySelector('.display__end-time');
@@ -43,6 +50,12 @@ function displayEndTime(timestamp) {
 function startTimer() {
   const seconds = parseInt(this.dataset.time);
   timer(seconds);
+}
+
+//check for validation input -- make sure form is not blank or NaN
+if (isNaN(mins) || mins <= 0) {
+  alert('Please enter a valid positive number.');
+  return;
 }
 
 buttons.forEach(button => button.addEventListener('click', startTimer));
