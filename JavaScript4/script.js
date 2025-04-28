@@ -52,12 +52,6 @@ function startTimer() {
   timer(seconds);
 }
 
-//check for validation input -- make sure form is not blank or NaN
-if (isNaN(mins) || mins <= 0) {
-  alert('Please enter a valid positive number.');
-  return;
-}
-
 buttons.forEach(button => button.addEventListener('click', startTimer));
 document.customForm.addEventListener('submit', function(e) {
   e.preventDefault();
