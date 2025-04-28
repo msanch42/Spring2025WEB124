@@ -1,3 +1,8 @@
+/* Monica Sanchez 4-25-25 */
+/* Adapted from https://javascript.com/ */
+/* Countdown Timer */
+/* new CSS properties: */
+/* new CSS functions: linear-gradient, "<>", conic gradient, var() colors */
 html {
   box-sizing: border-box;
   font-size: 10px;
