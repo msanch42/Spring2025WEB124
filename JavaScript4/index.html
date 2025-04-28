@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!--Monica Sanchez 4/25/25-->
+  <!--Monica Sanchez 4/27/25-->
   <!--Adapted from https://javascript30.com
   Countdown Timer-->
   <!--New attributes: data-time, form name="customForm",
@@ -24,6 +24,8 @@
       <button data-time="900" class="timer__button">Quick 15</button>
       <button data-time="1200" class="timer__button">Snack 20</button>
       <button data-time="3600" class="timer__button">Lunch Break</button>
+      <!-- Added pause/resume button -->
+      <button id="pause-resume" class="timer__button">Pause</button>
       <form name="customForm" id="custom">
         <input type="text" name="minutes" placeholder="Enter Minutes">
       </form>
