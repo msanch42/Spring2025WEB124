@@ -11,6 +11,7 @@ const slider = document.querySelector('.items');
   let scrollLeft;
 
   slider.addEventListener('mousedown', (e) => {
+    if (e.button !== 0) return; // added code to prevent behavior from right or middle-click dragging  
     isDown = true;
     slider.classList.add('active');
     startX = e.pageX - slider.offsetLeft;
