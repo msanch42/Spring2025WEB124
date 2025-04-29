@@ -18,7 +18,15 @@ const slider = document.querySelector('.items');
     scrollLeft = slider.scrollLeft;
   });
 
-  slider.addEventListener('mouseleave', () => {
+//Refactored repetetive code for mouseleave and mouseup
+function stopDragging() {
+    isDown = false;
+    slider.classList.remove('active');
+}
+
+slider.addEventListener('mouseleave', stopDragging);
+slider.addEventListener('mouseup', stopDragging);
+ /* slider.addEventListener('mouseleave', () => {
     isDown = false;
     slider.classList.remove('active');
   });
@@ -26,7 +34,7 @@ const slider = document.querySelector('.items');
   slider.addEventListener('mouseup', () => {
     isDown = false;
     slider.classList.remove('active');
-  });
+  });*/
 
   slider.addEventListener('mousemove', (e) => {
     if (!isDown) return;  // stop the fn from running
