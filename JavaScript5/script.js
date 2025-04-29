@@ -35,6 +35,10 @@ const slider = document.querySelector('.items');
     slider.scrollLeft = scrollLeft - walk;
   });
 
+//Added code to prevent scrolling beyond scroll bounds
+  slider.scrollLeft = Math.max(0, Math.min(slider.scrollWidth - slider.clientWidth, newScroll));
+});
+
 //Added code to debounce/throttle mousemove to improve performance
 let lastMove = 0;
 slider.addEventListener('mousemove', (e) => {
@@ -48,3 +52,5 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 3;
   slider.scrollLeft = scrollLeft - walk;
 });
+
+
