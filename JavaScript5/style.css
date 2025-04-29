@@ -5,7 +5,8 @@
 /* new CSS functions: grabbing, -webkit-grabbing, scaleX() */
 html {
   box-sizing: border-box;
-  background: url('https://source.unsplash.com/NFs6dRTBgaM/2000x2000') fixed;
+  background: url('white_pattern.jpg') fixed; /*img source from https://unsplash.com/photos/white-abstract-geometric-artwork-Fixg8KipOg8*/
+  /*background: url('https://source.unsplash.com/NFs6dRTBgaM/2000x2000') fixed;*/
   background-size: cover;
 }
 
