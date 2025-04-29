@@ -35,10 +35,16 @@ const slider = document.querySelector('.items');
     slider.scrollLeft = scrollLeft - walk;
   });
 
-//Added keyboard navigation to make cards focusable when arrow keys are used to scroll
-slider.setAttribute('tabindex', '0'); 
-slider.addEventListener('keydown', (e) => {
-  const scrollAmount = 50;
-  if (e.key === 'ArrowRight') slider.scrollLeft += scrollAmount;
-  if (e.key === 'ArrowLeft') slider.scrollLeft -= scrollAmount;
+//Added code to debounce/throttle mousemove to improve performance
+let lastMove = 0;
+slider.addEventListener('mousemove', (e) => {
+  const now = Date.now();
+  if (now - lastMove < 10) return;
+  lastMove = now;
+
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3;
+  slider.scrollLeft = scrollLeft - walk;
 });
