@@ -10,6 +10,18 @@ html {
   background-size: cover;
 }
 
+:root {
+--clr-1: #BFFFF1; /*Light Mint Green*/
+--clr-2: ##7CFFCB; /* Mint Green */
+--clr-3: #74F2CE; /* Dark Mint Green */
+--clr-4: #379634; /* Forest Green */
+--clr-5: #0A3200; /* Dark Green*/
+--clr-6: #D4C2FC; /* Light Purple */ 
+--clr-7: #998FC7; /* Purple */ 
+--clr-8: #28262C; /* Dark Purple */ 
+--clr-9: #14248A; /* Royal Blue */   
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -62,7 +74,17 @@ body {
   box-shadow: inset 0 0 0 10px rgba(0,0,0,0.15);
 }
 
-.item:nth-child(9n+1) { background: dodgerblue;}
+item:nth-child(9n+1) { var(--clr-1); }
+.item:nth-child(9n+2) { var(--clr-2); }
+.item:nth-child(9n+3) { var(--clr-3); }
+.item:nth-child(9n+4) { var(--clr-4); }
+.item:nth-child(9n+5) { var(--clr-5); }
+.item:nth-child(9n+6) { var(--clr-6); }
+.item:nth-child(9n+7) { var(--clr-7); }
+.item:nth-child(9n+8) { var(--clr-8); }
+.item:nth-child(9n+9) { var(--clr-9); }
+
+/*.item:nth-child(9n+1) { background: dodgerblue;}
 .item:nth-child(9n+2) { background: goldenrod;}
 .item:nth-child(9n+3) { background: paleturquoise;}
 .item:nth-child(9n+4) { background: gold;}
@@ -70,7 +92,7 @@ body {
 .item:nth-child(9n+6) { background: tomato;}
 .item:nth-child(9n+7) { background: lightcoral;}
 .item:nth-child(9n+8) { background: darkslateblue;}
-.item:nth-child(9n+9) { background: rebeccapurple;}
+.item:nth-child(9n+9) { background: rebeccapurple;}*/
 
 .item:nth-child(even) { transform: scaleX(1.31) rotateY(40deg); }
 .item:nth-child(odd) { transform: scaleX(1.31) rotateY(-40deg); }
