@@ -1,3 +1,10 @@
+// Monica Sanchez 4-29-25
+// Adapted from https://javasript.com/
+// CLick and Drag
+/* New/expanded information:
+    addEventListener for mouse, preventDefault(), 
+    functions for the slider.addEventListener
+*/
 const slider = document.querySelector('.items');
   let isDown = false;
   let startX;
@@ -27,3 +34,11 @@ const slider = document.querySelector('.items');
     const walk = (x - startX) * 3;
     slider.scrollLeft = scrollLeft - walk;
   });
+
+//Added keyboard navigation to make cards focusable when arrow keys are used to scroll
+slider.setAttribute('tabindex', '0'); 
+slider.addEventListener('keydown', (e) => {
+  const scrollAmount = 50;
+  if (e.key === 'ArrowRight') slider.scrollLeft += scrollAmount;
+  if (e.key === 'ArrowLeft') slider.scrollLeft -= scrollAmount;
+});
