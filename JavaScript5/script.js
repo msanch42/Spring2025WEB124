@@ -35,22 +35,4 @@ const slider = document.querySelector('.items');
     slider.scrollLeft = scrollLeft - walk;
   });
 
-//Added code to prevent scrolling beyond scroll bounds
-  slider.scrollLeft = Math.max(0, Math.min(slider.scrollWidth - slider.clientWidth, newScroll));
-});
-
-//Added code to debounce/throttle mousemove to improve performance
-let lastMove = 0;
-slider.addEventListener('mousemove', (e) => {
-  const now = Date.now();
-  if (now - lastMove < 10) return;
-  lastMove = now;
-
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 3;
-  slider.scrollLeft = scrollLeft - walk;
-});
-
 
