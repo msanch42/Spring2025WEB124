@@ -40,7 +40,7 @@ body {
   height: 800px;
   padding: 100px;
   width: 100%;
-  border: 1px solid white;
+  /*border: 1px solid white;*/
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -56,7 +56,8 @@ body {
 }
 
 .items.active {
-  background: rgba(255,255,255,0.3);
+  /*background: rgba(255,255,255,0.3);*/
+  background: rgba(58,255,0,0.3); /*Modified active grabbed state to light green*/
   cursor: grabbing;
   cursor: -webkit-grabbing;
   transform: scale(1);
