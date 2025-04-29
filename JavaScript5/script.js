@@ -34,5 +34,3 @@ const slider = document.querySelector('.items');
     const walk = (x - startX) * 3;
     slider.scrollLeft = scrollLeft - walk;
   });
-
-
