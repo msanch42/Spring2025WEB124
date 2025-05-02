@@ -50,3 +50,9 @@ function calculateAll() {
 
 document.getElementById('calculate').addEventListener('click', calculateAll);
 
+//Added code to also allow user to press on enter/return button to calculate results
+document.getElementById('num').addEventListener('keydown', function(event)) {
+  if(event.key ==== 'Enter') {
+    calculateAll();
+  }
+});
