@@ -5,7 +5,7 @@ function calculateAddition(num){
   for (let i = 1; i <= 10; i++) {
       result += `${num} + ${i} = ${num + i}\n`; //Using the \n special character so that the line breaks are displayed since I am using <p> tags
   }
-  document.getElementById('addition').innerHTML = result; 
+  document.getElementById('addition').textContent = result; 
 }
 
 function calculateSubtraction(num){
@@ -15,7 +15,7 @@ function calculateSubtraction(num){
       result += `${num} - ${i} = ${num - i}\n`;
       i++;
   } 
-  document.getElementById('subtraction').innerHTML = result; 
+  document.getElementById('subtraction').textContent = result; 
 }
 
 function calculateMultiplication(num){
@@ -25,7 +25,7 @@ function calculateMultiplication(num){
       result += `${num} * ${i} = ${num * i}\n`;
       i++;
   } while(i <= 10);
-  document.getElementById('multiplication').innerHTML = result; 
+  document.getElementById('multiplication').textContent = result; 
 }
 
 function calculateDivision(num){
@@ -33,7 +33,7 @@ function calculateDivision(num){
   for (let i = 1; i <= 10; i++) {
     result += `${num} / ${i} = ${(num / i).toFixed(2)}\n`; //return only two digits to the right of the decimal point in the division function
   }
-  document.getElementById('division').innerHTML = result; 
+  document.getElementById('division').textContent = result; 
 }
 
 function calculateAll() {
