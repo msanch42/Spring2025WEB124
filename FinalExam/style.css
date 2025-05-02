@@ -16,7 +16,8 @@ body {
 
 .container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 1080px;
   flex-wrap: wrap;
 }
