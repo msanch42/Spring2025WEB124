@@ -1,7 +1,7 @@
 //Monica Sanchez 5-1-25
 //Created JavaScript functions to calculate given number
-/*function calculateAddition(num){
-  let result = "";
+function calculateAddition(num){
+  let result = '';
   for (let i = 1; i <= 10; i++) {
       result += `${num} + ${i} = ${num + i}<br>`;
   }
@@ -9,7 +9,7 @@
 }
 
 function calculateSubtraction(num){
-  let result = "";
+  let result = '';
   let i = 1;
   while (i <= 10) {
       result += `${num} - ${i} = ${num - i}<br>`;
@@ -19,7 +19,7 @@ function calculateSubtraction(num){
 }
 
 function calculateMultiplication(num){
-  let result = "";
+  let result = '';
   let i = 1;
   do {
       result += `${num} * ${i} = ${num * i}<br>`;
@@ -29,15 +29,15 @@ function calculateMultiplication(num){
 }
 
 function calculateDivision(num){
-  let result = "";
+  let result = '';
   for (let i = 1; i <= 10; i++) {
-    result += `${num} / ${i} = ${(num / i).toFixed(2)}<br>` //return only two digits to the right of the decimal point in the division function
+    result += `${num} / ${i} = ${(num / i).toFixed(2)}<br>`; //return only two digits to the right of the decimal point in the division function
   }
   document.getElementById('division').innerHTML = result; 
 }
 
 function calculateAll() {
-  const num = parseFloat(document.getElementById("num").value);
+  const num = parseFloat(document.getElementById('num').value);
   if(!isNan(num)) {
     calculateAddition(num);
     calculateSubtraction(num);
@@ -48,55 +48,5 @@ function calculateAll() {
   }
 }
 
-document.getElementById("calculate').addEventListener("click", calculateAll);*/
-    function calculateAddition(value) {
-      let result = '';
-      for (let i = 1; i <= 10; i++) {
-        result += `${value} + ${i} = ${value + i}<br>`;
-      }
-      document.getElementById('addition').innerHTML = result;
-    }
-
-    function calculateSubtraction(value) {
-      let result = '';
-      let i = 1;
-      while (i <= 10) {
-        result += `${value} - ${i} = ${value - i}<br>`;
-        i++;
-      }
-      document.getElementById('subtraction').innerHTML = result;
-    }
-
-    function calculateMultiplication(value) {
-      let result = '';
-      let i = 1;
-      do {
-        result += `${value} * ${i} = ${value * i}<br>`;
-        i++;
-      } while (i <= 10);
-      document.getElementById('multiplication').innerHTML = result;
-    }
-
-    function calculateDivision(value) {
-      let result = '';
-      for (let i = 1; i <= 10; i++) {
-        result += `${value} / ${i} = ${(value / i).toFixed(2)}<br>`;
-      }
-      document.getElementById('division').innerHTML = result;
-    }
-
-    function runAllCalculations() {
-      const inputVal = parseFloat(document.getElementById('num').value);
-      if (isNaN(inputVal)) {
-        alert("Please enter a valid number.");
-        return;
-      }
-
-      calculateAddition(inputVal);
-      calculateSubtraction(inputVal);
-      calculateMultiplication(inputVal);
-      calculateDivision(inputVal);
-    }
-
-    document.getElementById('calcBtn').addEventListener('click', runAllCalculations);
+document.getElementById('calculate').addEventListener('click', calculateAll);
 
