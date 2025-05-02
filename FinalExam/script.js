@@ -31,7 +31,7 @@ function doMultiplication(num){
 function doDivision(num){
   let result = "";
   for (let i = 1; i <= 10; i++) {
-    result += `${num} / ${i} = ${num / i}<br>`
+    result += `${num} / ${i} = ${(num / i).toFixed(2)}<br>` //return only two digits to the right of the decimal point in the division function
   }
   document.getElementById("division").innerHTML = result; 
 }
