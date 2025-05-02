@@ -38,7 +38,7 @@ function calculateDivision(num){
 
 function calculateAll() {
   const num = parseFloat(document.getElementById('num').value);
-  if(!isNan(num)) {
+  if(!isNaN(num)) {
     calculateAddition(num);
     calculateSubtraction(num);
     calculateMultiplication(num);
