@@ -33,7 +33,7 @@ body {
   white-space: pre-line; /* Important in order to properly render \n as the line breaks */
 }
 
-#button {
+#calculate {
     display: inline-block;
     padding: 0.4em 1em;
     color: #20c997;
