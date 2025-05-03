@@ -55,12 +55,14 @@ input[type="number"] {
 }
 
 button {
+  display: inline-block;
   padding: 0.5rem 1rem;
   background-image: linear-gradient(135deg, var(--light-purple) , var(--pale-orange), var(--dark-orange));
+  bavkground-size: 200% auto; /* animation effect */
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
+  transition: background-position 0.4s ease, transform 0.2s ease;
   text-align: center;
   font-family: 'Lato', sans-serif;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -69,8 +71,7 @@ button {
 
 button:hover {
   background-position: right center; 
-  color: var(--white);
-  text-decoration: none;
+  transform: scale(1.05);
 }
 
 .box {
@@ -83,16 +84,6 @@ button:hover {
   white-space: pre-line; /* Important in order to properly render \n as the line breaks */
 }
 
-#calculate {
-    display: inline-block;
-    padding: 0.4em 1em;
-    color: var(--white);
-    background-color: #20c997;
-    border-radius: 0.2em;
-    text-decoration: none;
-    font-size: 1rem;
-    outline: 0;
-}
 
         /* .btn-grad {background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)}
          .btn-grad {
