@@ -84,19 +84,54 @@ button:hover {
   white-space: pre-line; /* Important in order to properly render \n as the line breaks */
 }
 
+/* TABLET BREAKPOINT */
+@media (max-width: 48rem) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
 
-        /* .btn-grad {background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)}
-         .btn-grad {
-            margin: 10px;
-            padding: 15px 45px;
-            
-            
-            background-size: 200% auto;
-            color: white;            
-            
-            border-radius: 10px;
-            display: block;
-          } */
+  .box {
+    width: 100%;
+    max-width: 90%;
+    text-align: left;
+  }
 
-          
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  input[type="number"], button {
+  width: 90%;
+  max-width: 400px;
+}
+    
+}
+
+/* PHONE BREAKPOINT */
+@media (max-width: 30rem) {
+  body {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size 1.5rem;
+  }
+
+  .box {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+   button {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  input[type="number"] {
+  font-size: 1rem;
+}
+}
          
