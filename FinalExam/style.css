@@ -32,3 +32,13 @@ body {
   border-radius: 0.2rem;
   white-space: pre-line; /* Important in order to properly render \n as the line breaks */
 }
+
+#button {
+    display: inline-block;
+    padding: 0.4em 1em;
+    color: #20c997;
+    border: 2px solid #20c997;
+    border-radius: 0.2em;
+    text-decoration: none;
+    font-size: 1rem;
+}
