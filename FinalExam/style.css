@@ -1,4 +1,4 @@
-/* Monica Sanchez 5-1-25 */
+/* Monica Sanchez 5-3-25 */
 
 html {
   --light-purple: #C580F2;
@@ -7,7 +7,7 @@ html {
   --white: #fff;
   --charcoal: #333;
   color: var(--text-color);
-  background: url('./design.jpg');
+  background: url('./design.jpg'); /* photo credits: https://unsplash.com/photos/a-black-background-with-orange-and-purple-circles-DnZiR361K6Y */
   background-size: cover;
   box-sizing: border-box;
   font-size: 16px;
