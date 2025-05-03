@@ -1,6 +1,7 @@
 /* Monica Sanchez 5-1-25 */
 
 html {
+  background: url('cool_wallpaper.jpg') fixed;
   box-sizing: border-box;
 }
 
@@ -13,7 +14,7 @@ body {
   text-align: center;
   font-family: "Lato", sans-serif;
   color: white;
-  background-color: #333;
+  
 }
 
 .container {
