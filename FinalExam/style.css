@@ -1,9 +1,16 @@
 /* Monica Sanchez 5-1-25 */
 
 html {
+  --light-purple: #C580F2;
+  --pale-orange: #C580F2;
+  --dark-orange: #F26022;
+  --white: #fff;
+  --charcoal: #333;
+  color: var(--text-color);
   background: url('./design.jpg');
   background-size: cover;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 *, *:before, *:after {
@@ -14,24 +21,55 @@ body {
   margin: 0;
   text-align: center;
   font-family: "Lato", sans-serif;
-  text-color: white;
+  color: var(--white);
+  text-align: center;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 1080px;
-  margin: 20px auto;
-  padding: 0 20px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
   flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+
+labe, input, button {
+  font-size: 1rem;
+  margin: 0.5rem;
+}
+
+input[type="number"] {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  width: 200px;
+  max-width: 80%;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(to right, var(--light-purple) , var(--pale-orange), var(--dark-orange));
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 .box {
   flex: 1;
   min-width: 200px;
   padding: 10px;
-  background-color: #191b1c;
+  background-color: var(--charcoal);
   border-radius: 0.2rem;
   line-height: 2.6;
   white-space: pre-line; /* Important in order to properly render \n as the line breaks */
@@ -40,10 +78,27 @@ body {
 #calculate {
     display: inline-block;
     padding: 0.4em 1em;
-    color: white;
+    color: var(--white);
     background-color: #20c997;
     border-radius: 0.2em;
     text-decoration: none;
     font-size: 1rem;
     outline: 0;
 }
+
+         .btn-grad {background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          
+         
